@@ -66,7 +66,7 @@ export default function CookiesPage() {
               Cookie<br /><span style={{ color: 'rgba(255,255,255,0.35)' }}>Policy.</span>
             </h1>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', maxWidth: '480px', lineHeight: 1.7, margin: 0 }}>
-              Last updated: October 2025 · Sigma Investments, Maastricht University
+              Legal disclosure · Sigma Investments, Maastricht University
             </p>
           </div>
         </div>

@@ -24,6 +24,7 @@ import TeamPage from './components/TeamPage';
 import EventsPage from './components/EventsPage';
 import PrivacyPage from './components/PrivacyPage';
 import CookiesPage from './components/CookiesPage';
+import ImprintPage from './components/ImprintPage';
 
 function HomePage() {
   useEffect(() => {
@@ -33,7 +34,7 @@ function HomePage() {
   return (
     <>
       <HeroBanner />
-      <LogoCarousel />
+      {/* <LogoCarousel /> */}
       <ScrollReveal />
       <Activities />
       <InvestmentPillars />
@@ -73,6 +74,7 @@ function App() {
               <Route path="/events" element={<EventsPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/imprint" element={<CookiesPage />} />
+              <Route path="/imprint-legal" element={<ImprintPage />} />
             </Routes>
           </main>
           <Footer />

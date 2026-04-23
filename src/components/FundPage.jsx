@@ -46,6 +46,8 @@ export default function FundPage() {
                   loop
                   muted
                   playsInline
+                  preload="none"
+                  poster="/stock-market-poster.jpg"
                   style={{
                     position: 'absolute',
                     top: 0,

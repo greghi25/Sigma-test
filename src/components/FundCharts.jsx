@@ -22,46 +22,26 @@ export default function FundCharts({ footerText = null }) {
       .catch(err => console.error("Could not load globe data", err));
   }, []);
 
-  // Many connection arcs representing 86+ nationalities
+  // Connection arcs representing 86+ nationalities across all continents
   const arcsData = [
-    // From Maastricht (home base) to all continents
-    { startLat: 50.8, startLng: 4.3, endLat: 40.7, endLng: -74.0, color: '#01A3B5' },    // NYC
-    { startLat: 50.8, startLng: 4.3, endLat: 34.0, endLng: -118.2, color: '#01A3B5' },  // LA
-    { startLat: 50.8, startLng: 4.3, endLat: 35.7, endLng: 139.7, color: '#01A3B5' },   // Tokyo
-    { startLat: 50.8, startLng: 4.3, endLat: 31.2, endLng: 121.5, color: '#01A3B5' },   // Shanghai
-    { startLat: 50.8, startLng: 4.3, endLat: 1.3, endLng: 103.8, color: '#01A3B5' },    // Singapore
-    { startLat: 50.8, startLng: 4.3, endLat: -33.9, endLng: 151.2, color: '#01A3B5' },  // Sydney
-    { startLat: 50.8, startLng: 4.3, endLat: -23.5, endLng: -46.6, color: '#01A3B5' },  // São Paulo
-    { startLat: 50.8, startLng: 4.3, endLat: 19.4, endLng: -99.1, color: '#01A3B5' },   // Mexico City
-    { startLat: 50.8, startLng: 4.3, endLat: 28.6, endLng: 77.2, color: '#01A3B5' },    // Delhi
-    { startLat: 50.8, startLng: 4.3, endLat: -33.9, endLng: 18.4, color: '#01A3B5' },   // Cape Town
-    { startLat: 50.8, startLng: 4.3, endLat: 55.8, endLng: 37.6, color: '#01A3B5' },    // Moscow
-    { startLat: 50.8, startLng: 4.3, endLat: -1.3, endLng: 36.8, color: '#01A3B5' },    // Nairobi
-    { startLat: 50.8, startLng: 4.3, endLat: 25.3, endLng: 55.3, color: '#01A3B5' },    // Dubai
-    { startLat: 50.8, startLng: 4.3, endLat: -34.6, endLng: -58.4, color: '#01A3B5' },  // Buenos Aires
-    
-    // Inter-continental connections
-    { startLat: 40.7, startLng: -74.0, endLat: 51.5, endLng: -0.1, color: '#11253e' },  // NYC-London
-    { startLat: 40.7, startLng: -74.0, endLat: 35.7, endLng: 139.7, color: '#11253e' }, // NYC-Tokyo
-    { startLat: 51.5, startLng: -0.1, endLat: 1.3, endLng: 103.8, color: '#11253e' },   // London-Singapore
-    { startLat: 35.7, startLng: 139.7, endLat: 1.3, endLng: 103.8, color: '#3d5fa6' },  // Tokyo-Singapore
-    { startLat: 31.2, startLng: 121.5, endLat: 22.3, endLng: 114.2, color: '#3d5fa6' }, // Shanghai-HK
-    { startLat: 28.6, startLng: 77.2, endLat: 25.3, endLng: 55.3, color: '#3d5fa6' },   // Delhi-Dubai
-    { startLat: -23.5, startLng: -46.6, endLat: -34.6, endLng: -58.4, color: '#3d5fa6' }, // São Paulo-Buenos Aires
-    { startLat: 34.0, startLng: -118.2, endLat: 19.4, endLng: -99.1, color: '#3d5fa6' }, // LA-Mexico City
+    { startLat: 50, startLng: 10, endLat: 40, endLng: -100, color: '#01A3B5' },   // Europe → North America
+    { startLat: 50, startLng: 10, endLat: 30, endLng: 105, color: '#01A3B5' },    // Europe → Asia
+    { startLat: 40, startLng: -100, endLat: 30, endLng: 105, color: '#01A3B5' },  // North America → Asia
+    { startLat: 50, startLng: 10, endLat: -15, endLng: 25, color: '#3d5fa6' },    // Europe → Africa
+    { startLat: 50, startLng: 10, endLat: -25, endLng: -55, color: '#3d5fa6' },   // Europe → South America
+    { startLat: 30, startLng: 105, endLat: -25, endLng: 135, color: '#3d5fa6' },  // Asia → Australia
+    { startLat: 40, startLng: -100, endLat: -25, endLng: -55, color: '#3d5fa6' }, // North America → South America
+    { startLat: 30, startLng: 105, endLat: -15, endLng: 25, color: '#3d5fa6' },   // Asia → Africa
   ];
 
-  // Major cities as points
+  // Region markers
   const pointsData = [
-    { lat: 50.8, lng: 4.3, size: 0.6, color: '#940a11' },   // Maastricht (home)
-    { lat: 40.7, lng: -74.0, size: 0.4, color: '#01A3B5' }, // NYC
-    { lat: 51.5, lng: -0.1, size: 0.4, color: '#01A3B5' },  // London
-    { lat: 35.7, lng: 139.7, size: 0.4, color: '#01A3B5' }, // Tokyo
-    { lat: 1.3, lng: 103.8, size: 0.4, color: '#01A3B5' },  // Singapore
-    { lat: 31.2, lng: 121.5, size: 0.3, color: '#3d5fa6' }, // Shanghai
-    { lat: -33.9, lng: 151.2, size: 0.3, color: '#3d5fa6' }, // Sydney
-    { lat: 28.6, lng: 77.2, size: 0.3, color: '#3d5fa6' },  // Delhi
-    { lat: 25.3, lng: 55.3, size: 0.3, color: '#3d5fa6' },  // Dubai
+    { lat: 50, lng: 10, size: 0.5, color: '#940a11' },    // Europe
+    { lat: 40, lng: -100, size: 0.4, color: '#01A3B5' },  // North America
+    { lat: 30, lng: 105, size: 0.4, color: '#01A3B5' },   // Asia
+    { lat: -15, lng: 25, size: 0.4, color: '#3d5fa6' },   // Africa
+    { lat: -25, lng: -55, size: 0.4, color: '#3d5fa6' },  // South America
+    { lat: -25, lng: 135, size: 0.4, color: '#3d5fa6' },  // Australia
   ];
 
   useEffect(() => {

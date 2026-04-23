@@ -22,18 +22,26 @@ export default function InvestmentStrategy({ hideHeader = false, footerText = nu
       .catch(err => console.error("Could not load globe data", err));
   }, []);
 
-  // Connection arcs
+  // Connection arcs representing 86+ nationalities across all continents
   const arcsData = [
-    { startLat: 50, startLng: 10, endLat: 40, endLng: -100, color: '#01A3B5' },
-    { startLat: 50, startLng: 10, endLat: 30, endLng: 105, color: '#01A3B5' },
-    { startLat: 40, startLng: -100, endLat: 30, endLng: 105, color: '#01A3B5' },
+    { startLat: 50, startLng: 10, endLat: 40, endLng: -100, color: '#01A3B5' },   // Europe → North America
+    { startLat: 50, startLng: 10, endLat: 30, endLng: 105, color: '#01A3B5' },    // Europe → Asia
+    { startLat: 40, startLng: -100, endLat: 30, endLng: 105, color: '#01A3B5' },  // North America → Asia
+    { startLat: 50, startLng: 10, endLat: -15, endLng: 25, color: '#3d5fa6' },    // Europe → Africa
+    { startLat: 50, startLng: 10, endLat: -25, endLng: -55, color: '#3d5fa6' },   // Europe → South America
+    { startLat: 30, startLng: 105, endLat: -25, endLng: 135, color: '#3d5fa6' },  // Asia → Australia
+    { startLat: 40, startLng: -100, endLat: -25, endLng: -55, color: '#3d5fa6' }, // North America → South America
+    { startLat: 30, startLng: 105, endLat: -15, endLng: 25, color: '#3d5fa6' },   // Asia → Africa
   ];
 
   // Region markers
   const pointsData = [
-    { lat: 50, lng: 10, size: 0.5, color: '#940a11' },
-    { lat: 40, lng: -100, size: 0.4, color: '#01A3B5' },
-    { lat: 30, lng: 105, size: 0.4, color: '#01A3B5' },
+    { lat: 50, lng: 10, size: 0.5, color: '#940a11' },    // Europe
+    { lat: 40, lng: -100, size: 0.4, color: '#01A3B5' },  // North America
+    { lat: 30, lng: 105, size: 0.4, color: '#01A3B5' },   // Asia
+    { lat: -15, lng: 25, size: 0.4, color: '#3d5fa6' },   // Africa
+    { lat: -25, lng: -55, size: 0.4, color: '#3d5fa6' },  // South America
+    { lat: -25, lng: 135, size: 0.4, color: '#3d5fa6' },  // Australia
   ];
 
   useEffect(() => {

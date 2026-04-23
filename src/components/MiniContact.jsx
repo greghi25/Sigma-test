@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import contactBoardImg from '../assets/team/contact-board.jpg';
 
 export default function MiniContact() {
   const [formData, setFormData] = useState({
@@ -119,7 +120,7 @@ export default function MiniContact() {
             {/* Right — Image */}
             <div className="mini-contact-image" style={{ position: 'relative', overflow: 'hidden' }}>
               <img
-                src="https://images.squarespace-cdn.com/content/v1/65229dc1d74b6e6f6d36dfb0/19508b10-9f27-4a32-9d48-c4eb48a87229/Board.jpeg"
+                src={contactBoardImg}
                 alt="Sigma Investments team"
                 style={{
                   position: 'absolute',

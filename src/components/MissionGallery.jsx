@@ -17,11 +17,10 @@ export default function MissionGallery() {
     >
       <div className="section-hero-image" style={{ position: 'relative', overflow: 'visible', ...(isMobile ? { width: '100%' } : {}) }}>
         <div className="hover-gallery-container">
-          <img className="gallery-layer gallery-layer-1" loading="lazy" src="Board-1.png" alt="Base Image" />
-          <img className="gallery-layer gallery-layer-2" loading="lazy" src="Commitee-1.png" alt="Hover Image" />
-          {/* <img className="gallery-layer gallery-layer-3" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/65229dc1d74b6e6f6d36dfb0/41068ccb-5ca3-4388-b99d-13fc4e86e202/I%26E.JPG?format=1000w" alt="Hover Image" />
-          <img className="gallery-layer gallery-layer-4" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/65229dc1d74b6e6f6d36dfb0/67283690-e0fe-45f8-bc7a-b1d964e510d1/ConsumerGoods.JPG?format=1500w" alt="Hover Image" />
-          <img className="gallery-layer gallery-layer-5" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/65229dc1d74b6e6f6d36dfb0/d8a67050-ec08-47b0-a198-db97edfeb9b9/TMT.JPG?format=1000w" alt="Hover Image" /> */}
+          <img className="gallery-layer gallery-layer-1" loading="lazy" src="Board-1.png" alt="Sigma team" />
+          <img className="gallery-layer gallery-layer-2" loading="lazy" src="Board-2.jpg" alt="Sigma team" />
+          <img className="gallery-layer gallery-layer-3" loading="lazy" src="Board-3.jpg" alt="Sigma team" />
+          <img className="gallery-layer gallery-layer-4" loading="lazy" src="Board-4.jpg" alt="Sigma team" />
         </div>
       </div>
       <div 

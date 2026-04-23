@@ -69,8 +69,9 @@ export default function JoinPage() {
                 <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: 1.7, margin: '0 0 2.5rem 0' }}>
                   Join our vibrant community of students passionate about finance and investing. Get access to exclusive events and networking opportunities.
                 </p>
-                <a 
-                  href="#" 
+                {/* Apply for Membership button — hidden until backend is ready */}
+                {/* <a
+                  href="#"
                   style={{
                     display: 'inline-block',
                     background: '#940a11',
@@ -82,7 +83,16 @@ export default function JoinPage() {
                   }}
                 >
                   Apply for Membership
-                </a>
+                </a> */}
+                <p style={{
+                  fontSize: '1.1rem',
+                  color: '#94a3b8',
+                  fontWeight: 500,
+                  fontStyle: 'italic',
+                  margin: 0
+                }}>
+                  Applications are currently paused. Please check back soon.
+                </p>
               </div>
             </div>
 
@@ -143,8 +153,9 @@ export default function JoinPage() {
                 <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: 1.7, margin: '0 0 2.5rem 0' }}>
                   Please find the sign-up document below to join us as a fund member. If you have any further questions please do not hesitate to reach out to our fund administration team!
                 </p>
-                <a 
-                  href="#" 
+                {/* Register as Investor button — hidden until backend is ready */}
+                {/* <a
+                  href="#"
                   style={{
                     display: 'inline-block',
                     background: '#940a11',
@@ -156,7 +167,16 @@ export default function JoinPage() {
                   }}
                 >
                   Register as Investor
-                </a>
+                </a> */}
+                <p style={{
+                  fontSize: '1.1rem',
+                  color: '#94a3b8',
+                  fontWeight: 500,
+                  fontStyle: 'italic',
+                  margin: 0
+                }}>
+                  Investor sign-ups are currently paused. Please check back soon.
+                </p>
               </div>
             </div>
 

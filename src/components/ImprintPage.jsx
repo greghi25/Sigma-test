@@ -2,40 +2,24 @@ import { useEffect } from 'react';
 
 const sections = [
   {
-    title: 'Who We Are',
-    content: `Sigma Investments is a student-managed investment fund affiliated with Maastricht University's School of Business and Economics. Our website address is sigma-investments.com. We are committed to protecting your personal data and respecting your privacy.`,
-  },
-  {
-    title: 'What Data We Collect',
-    content: `We may collect the following personal data when you interact with our website or contact us:\n\n• Name and email address (via contact forms)\n• Usage data such as pages visited, time spent, and browser type\n• Device and IP address information collected automatically\n\nWe do not collect sensitive personal data such as financial information, health data, or government identifiers.`,
-  },
-  {
-    title: 'How We Use Your Data',
-    content: `Your data is used solely for the following purposes:\n\n• Responding to enquiries submitted through our contact form\n• Improving the performance and content of our website\n• Sending relevant updates if you have opted in\n\nWe do not sell, rent, or share your personal data with third parties for marketing purposes.`,
-  },
-  {
-    title: 'Legal Basis for Processing',
-    content: `We process your personal data on the following legal bases under the GDPR:\n\n• Consent — when you submit a contact form or subscribe to updates\n• Legitimate interests — for website analytics and security\n• Legal obligation — where required by applicable law`,
-  },
-  {
-    title: 'Data Retention',
-    content: `We retain personal data only for as long as necessary to fulfil the purposes for which it was collected. Contact form submissions are retained for a maximum of 12 months. Analytics data is retained in anonymised form.`,
-  },
-  {
-    title: 'Your Rights',
-    content: `Under the GDPR, you have the following rights:\n\n• Right to access your personal data\n• Right to rectification of inaccurate data\n• Right to erasure ("right to be forgotten")\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nTo exercise any of these rights, please contact us at info@sigma-investments.com.`,
-  },
-  {
-    title: 'Third-Party Services',
-    content: `Our website may use third-party services including Google Analytics and embedded content from external platforms. These services may collect data in accordance with their own privacy policies. We encourage you to review those policies independently.`,
+    title: 'Organisation',
+    content: `Sigma Investments\nTongersestraat 43\n6211 LM Maastricht\nThe Netherlands`,
   },
   {
     title: 'Contact',
-    content: `For any privacy-related questions or requests, please contact:\n\nSigma Investments\nMaastricht University, SBE\ninfo@sigma-investments.com`,
+    content: `Email: info@sigma-investments.com\nPhone: +39 3923746278`,
+  },
+  {
+    title: 'Registration',
+    content: `KVK Number: 41078174`,
+  },
+  {
+    title: 'Responsible',
+    content: `Giovanni Fiorio`,
   },
 ];
 
-export default function PrivacyPage() {
+export default function ImprintPage() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
@@ -47,7 +31,7 @@ export default function PrivacyPage() {
           <div className="section-group-content" style={{ position: 'relative', zIndex: 1 }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)', display: 'block', marginBottom: '1.5rem' }}>Legal</span>
             <h1 style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: '#ffffff', letterSpacing: '-0.04em', lineHeight: 1, margin: '0 0 1.5rem', fontFamily: "'Outfit', sans-serif" }}>
-              Privacy &amp;<br /><span style={{ color: 'rgba(255,255,255,0.35)' }}>Data Protection.</span>
+              Imprint.
             </h1>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', maxWidth: '480px', lineHeight: 1.7, margin: 0 }}>
               Legal disclosure · Sigma Investments, Maastricht University
