@@ -122,7 +122,8 @@ export default function FundPage() {
 
       {/* Diversification & Assets */}
       <FundCharts 
-        footerText="Simplified allocation of individual equities, excludes ETF positions. Managed by the fund manager, industry-, risk-, technical-, and sustainability team. 2023."
+        footerText="Simplified allocation of individual equities, excludes ETF positions. Managed by the fund manager, industry-, risk-, technical-, and sustainability team. 2026
+        ."
       />
 
       {/* FAQ Motivation */}

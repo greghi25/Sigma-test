@@ -298,7 +298,7 @@ export default function AboutPage() {
 
       <section className="section-image outside animation-scroll-trigger animation-multiple" id="section-14">
         <div className="section-image-inner">
-          <img className="desktop animation-target animation-target-scale-in" loading="lazy" src="/about-hero.png" alt="Social Gatherings" />
+          <img className="desktop animation-target animation-target-scale-in" loading="lazy" src="/collage_sigma.jpg" alt="Sigma Events" />
         </div>
       </section>
 
