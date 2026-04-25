@@ -239,7 +239,7 @@ export default function FundPage() {
               Join Europe's leading student-managed investment club and kickstart your career in finance.
             </p>
             <a 
-              href="#" 
+              href="/join"
               data-aos="fade-up"
               data-aos-delay="200"
               style={{
