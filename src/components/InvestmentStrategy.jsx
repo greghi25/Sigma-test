@@ -83,9 +83,9 @@ export default function InvestmentStrategy({ hideHeader = false, footerText = nu
       chart = new Chart(donutCtx, {
         type: 'doughnut',
         data: {
-          labels: ['Industrials', 'Technology', 'Healthcare', 'Financial Services', 'Real Estate', 'Consumer Goods', 'Cash'],
+          labels: ['Technology, Media & Telecom', 'Financial Services', 'Healthcare', 'Cash', 'Consumer Goods', 'Industrials', 'Real Estate'],
           datasets: [{
-            data: [28, 22, 16, 14, 10, 6, 4],
+            data: [24.29, 14.88, 14.60, 13.75, 13.03, 12.46, 6.98],
             backgroundColor: ['#11253e', '#2a4476', '#3d5fa6', '#5d85d7', '#475569', '#94a3b8', '#cbd5e1'],
             borderColor: '#ffffff',
             borderWidth: 2,
@@ -154,32 +154,32 @@ export default function InvestmentStrategy({ hideHeader = false, footerText = nu
                     <canvas id="assetsDonut" className="assets-donut-canvas" ref={donutCanvasRef}></canvas>
                     <div className="assets-legend">
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#11253e' }}></span> Industrials</div>
-                        <span className="assets-legend-pct">28%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#11253e' }}></span> Technology, Media & Telecom</div>
+                        <span className="assets-legend-pct">24.29%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#2a4476' }}></span> Technology</div>
-                        <span className="assets-legend-pct">22%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#2a4476' }}></span> Financial Services</div>
+                        <span className="assets-legend-pct">14.88%</span>
                       </div>
                       <div className="assets-legend-item">
                         <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#3d5fa6' }}></span> Healthcare</div>
-                        <span className="assets-legend-pct">16%</span>
+                        <span className="assets-legend-pct">14.60%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#5d85d7' }}></span> Financial Services</div>
-                        <span className="assets-legend-pct">14%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#5d85d7' }}></span> Cash</div>
+                        <span className="assets-legend-pct">13.75%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#475569' }}></span> Real Estate</div>
-                        <span className="assets-legend-pct">10%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#475569' }}></span> Consumer Goods</div>
+                        <span className="assets-legend-pct">13.03%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#94a3b8' }}></span> Consumer Goods</div>
-                        <span className="assets-legend-pct">6%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#94a3b8' }}></span> Industrials</div>
+                        <span className="assets-legend-pct">12.46%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#cbd5e1' }}></span> Cash</div>
-                        <span className="assets-legend-pct">4%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#cbd5e1' }}></span> Real Estate</div>
+                        <span className="assets-legend-pct">6.98%</span>
                       </div>
                     </div>
                   </div>

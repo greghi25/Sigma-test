@@ -39,16 +39,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: '', email: '', role: 'student', message: '' });
-      
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    setIsSuccess(true);
   };
 
   return (
@@ -75,11 +66,12 @@ export default function ContactForm() {
               {isSuccess ? (
                 <div className="contact-success-state" style={{ padding: '4rem 2rem', textAlign: 'center' }}>
                   <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: '1.5rem' }}>
-                    <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#3d5fa6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M7.75 12L10.58 14.83L16.25 9.17004" stroke="#3d5fa6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 8v4" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round"/>
+                    <circle cx="12" cy="16" r="0.5" fill="#94a3b8" stroke="#94a3b8" strokeWidth="1.5"/>
                   </svg>
-                  <h3 style={{ fontSize: '2.5rem', color: '#11253e', marginBottom: '1rem', fontWeight: 300, letterSpacing: '-0.02em' }}>Message Sent!</h3>
-                  <p style={{ fontSize: '1.15rem', color: '#64748b', lineHeight: 1.6 }}>Thank you for reaching out to Sigma Investments. We'll be in touch with you shortly.</p>
+                  <h3 style={{ fontSize: '2.5rem', color: '#11253e', marginBottom: '1rem', fontWeight: 300, letterSpacing: '-0.02em' }}>Currently Unavailable</h3>
+                  <p style={{ fontSize: '1.15rem', color: '#64748b', lineHeight: 1.6 }}>We're not receiving messages through this form at the moment. Please reach out to us directly at <a href="mailto:info@sigma-investments.com" style={{ color: '#3d5fa6' }}>info@sigma-investments.com</a>.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="sigma-contact-form">

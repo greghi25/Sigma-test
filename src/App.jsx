@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <>
       <HeroBanner />
-      {/* <LogoCarousel /> */}
+      <LogoCarousel />
       <ScrollReveal />
       <Activities />
       <InvestmentPillars />
