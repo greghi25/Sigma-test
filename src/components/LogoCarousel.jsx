@@ -5,10 +5,10 @@ export default function LogoCarousel() {
     { height: 32, alt: 'Jane Street', src: '/Jane_Street.png' },
   ];
 
-  const renderLogos = () =>
-    logos.map((logo, i) => (
+  const renderLogos = (offset = 0) =>
+    [...logos, ...logos, ...logos].map((logo, i) => (
       <img
-        key={i}
+        key={offset + i}
         loading="eager"
         alt={logo.alt}
         src={logo.src}
@@ -23,8 +23,8 @@ export default function LogoCarousel() {
         <div className="logo-headline">Connected to the world's most prestigious financial institutions</div>
       </div>
       <div className="logos-wrapper">
-        <div className="all-logos">{renderLogos()}</div>
-        <div className="all-logos">{renderLogos()}</div>
+        <div className="all-logos">{renderLogos(0)}</div>
+        <div className="all-logos">{renderLogos(100)}</div>
       </div>
     </section>
   );
