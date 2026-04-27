@@ -22,26 +22,26 @@ export default function FundCharts({ footerText = null }) {
       .catch(err => console.error("Could not load globe data", err));
   }, []);
 
-  // Connection arcs representing 86+ nationalities across all continents
+  // Connection arcs reflecting portfolio country exposure
   const arcsData = [
-    { startLat: 50, startLng: 10, endLat: 40, endLng: -100, color: '#01A3B5' },   // Europe → North America
-    { startLat: 50, startLng: 10, endLat: 30, endLng: 105, color: '#01A3B5' },    // Europe → Asia
-    { startLat: 40, startLng: -100, endLat: 30, endLng: 105, color: '#01A3B5' },  // North America → Asia
-    { startLat: 50, startLng: 10, endLat: -15, endLng: 25, color: '#3d5fa6' },    // Europe → Africa
-    { startLat: 50, startLng: 10, endLat: -25, endLng: -55, color: '#3d5fa6' },   // Europe → South America
-    { startLat: 30, startLng: 105, endLat: -25, endLng: 135, color: '#3d5fa6' },  // Asia → Australia
-    { startLat: 40, startLng: -100, endLat: -25, endLng: -55, color: '#3d5fa6' }, // North America → South America
-    { startLat: 30, startLng: 105, endLat: -15, endLng: 25, color: '#3d5fa6' },   // Asia → Africa
+    { startLat: 52.3, startLng: 5.3, endLat: 38, endLng: -97, color: '#01A3B5' },    // NL → US
+    { startLat: 51.2, startLng: 10.4, endLat: 38, endLng: -97, color: '#01A3B5' },   // DE → US
+    { startLat: 46.8, startLng: 8.2, endLat: 38, endLng: -97, color: '#3d5fa6' },    // CH → US
+    { startLat: 52.3, startLng: 5.3, endLat: 36.2, endLng: 138.3, color: '#3d5fa6' }, // NL → JP
+    { startLat: 38, startLng: -97, endLat: 36.2, endLng: 138.3, color: '#3d5fa6' },  // US → JP
   ];
 
-  // Region markers
+  // Country markers matching portfolio holdings
   const pointsData = [
-    { lat: 50, lng: 10, size: 0.5, color: '#940a11' },    // Europe
-    { lat: 40, lng: -100, size: 0.4, color: '#01A3B5' },  // North America
-    { lat: 30, lng: 105, size: 0.4, color: '#01A3B5' },   // Asia
-    { lat: -15, lng: 25, size: 0.4, color: '#3d5fa6' },   // Africa
-    { lat: -25, lng: -55, size: 0.4, color: '#3d5fa6' },  // South America
-    { lat: -25, lng: 135, size: 0.4, color: '#3d5fa6' },  // Australia
+    { lat: 38, lng: -97, size: 0.6, color: '#11253e' },   // United States
+    { lat: 52.3, lng: 5.3, size: 0.4, color: '#2a4476' }, // Netherlands
+    { lat: 51.2, lng: 10.4, size: 0.3, color: '#3d5fa6' }, // Germany
+    { lat: 53.3, lng: -8.2, size: 0.3, color: '#5d85d7' }, // Ireland
+    { lat: 40.4, lng: -3.7, size: 0.3, color: '#7ba3e8' }, // Spain
+    { lat: 46.8, lng: 8.2, size: 0.3, color: '#475569' },  // Switzerland
+    { lat: 46.2, lng: 2.2, size: 0.3, color: '#94a3b8' },  // France
+    { lat: 36.2, lng: 138.3, size: 0.3, color: '#cbd5e1' }, // Japan
+    { lat: 56.3, lng: 9.5, size: 0.2, color: '#e2e8f0' },  // Denmark
   ];
 
   useEffect(() => {
@@ -179,21 +179,45 @@ export default function FundCharts({ footerText = null }) {
                     
                     <div className="assets-legend" style={{ marginLeft: '0.5rem' }}>
                       <div style={{ marginBottom: '1rem' }}>
-                        <p style={{ margin: 0, fontWeight: 600, color: '#11253e', fontSize: '0.95rem', marginBottom: '0.2rem' }}>Exposure across 40+ markets</p>
+                        <p style={{ margin: 0, fontWeight: 600, color: '#11253e', fontSize: '0.95rem', marginBottom: '0.2rem' }}>Portfolio by country</p>
                         <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b', fontStyle: 'italic' }}>Drag to explore</p>
                       </div>
-                      
+
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#11253e' }}></span> North America</div>
-                        <span className="assets-legend-pct">55%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#11253e' }}></span> United States</div>
+                        <span className="assets-legend-pct">71.1%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#3d5fa6' }}></span> Europe</div>
-                        <span className="assets-legend-pct">37%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#2a4476' }}></span> Netherlands</div>
+                        <span className="assets-legend-pct">8.7%</span>
                       </div>
                       <div className="assets-legend-item">
-                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#cbd5e1' }}></span> Asia</div>
-                        <span className="assets-legend-pct">9%</span>
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#3d5fa6' }}></span> Germany</div>
+                        <span className="assets-legend-pct">4.5%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#5d85d7' }}></span> Ireland</div>
+                        <span className="assets-legend-pct">4.3%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#7ba3e8' }}></span> Spain</div>
+                        <span className="assets-legend-pct">4.2%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#475569' }}></span> Switzerland</div>
+                        <span className="assets-legend-pct">2.6%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#94a3b8' }}></span> France</div>
+                        <span className="assets-legend-pct">2.0%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#cbd5e1' }}></span> Japan</div>
+                        <span className="assets-legend-pct">1.8%</span>
+                      </div>
+                      <div className="assets-legend-item">
+                        <div className="assets-legend-left"><span className="assets-dot" style={{ background: '#e2e8f0' }}></span> Denmark</div>
+                        <span className="assets-legend-pct">0.9%</span>
                       </div>
                     </div>
                   </div>
